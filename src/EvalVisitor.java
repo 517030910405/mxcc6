@@ -271,8 +271,15 @@ public class EvalVisitor extends MxBaseVisitor<node> {
         ans.type = "while";
         node node1 = visit(ctx.expr());
         node node2 = visit(ctx.singstat());
+        node2.has_scope = false;
+        ans.has_scope = true;
         ans.son.add(node1);
         ans.son.add(node2);
+        return ans;
+    }
+    @Override public node visitEmpty_stmt(MxParser.Empty_stmtContext ctx){
+        node ans = new node();
+        ans.type = "none";
         return ans;
     }
     /**

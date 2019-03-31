@@ -735,7 +735,14 @@ public class pro1 {
                 throw new Exception("CE: return3");
             }
         }
-
+        if (now.type.equals("continue")){
+            int j = scope_info.size()-1;
+            while (!(scope_info.get(j).type.equals("for")||scope_info.get(j).type.equals("while"))){
+                System.err.println(scope_info.get(j).type);
+                j = j-1;
+            }
+            //Automatic CE if no for or while
+        }
         if (now.type.equals("variable")|| now.type.equals("input_variable")){
             scope_info.get(scope_info.size()-1).scope.get(now.son.get(1).name).activate = true;
         }
@@ -952,7 +959,9 @@ public class pro1 {
             if(!root1.scope.containsKey("main")){
                 throw new Exception("No Main");
             }
-
+            if (!root1.scope.get("main").type.equals("function")){
+                throw new Exception("No Main");
+            }
         } catch (Throwable eee){
             //throw new Exception("Well");
             System.err.println("CE");

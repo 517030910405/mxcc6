@@ -93,6 +93,18 @@ public interface MxListener extends ParseTreeListener {
 	 */
 	void exitStat(MxParser.StatContext ctx);
 	/**
+	 * Enter a parse tree produced by the {@code empty_stmt}
+	 * labeled alternative in {@link MxParser#singstat}.
+	 * @param ctx the parse tree
+	 */
+	void enterEmpty_stmt(MxParser.Empty_stmtContext ctx);
+	/**
+	 * Exit a parse tree produced by the {@code empty_stmt}
+	 * labeled alternative in {@link MxParser#singstat}.
+	 * @param ctx the parse tree
+	 */
+	void exitEmpty_stmt(MxParser.Empty_stmtContext ctx);
+	/**
 	 * Enter a parse tree produced by the {@code sing_stmt}
 	 * labeled alternative in {@link MxParser#singstat}.
 	 * @param ctx the parse tree
