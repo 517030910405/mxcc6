@@ -1,11 +1,5 @@
 import java.util.*;
 public class node{
-    /*
-        boolean add(Object o)
-        将指定元素添加到此向量的末尾。
-        boolean addAll(Collection c)
-        将指定 Collection 中的所有元素添加到此向量的末尾，按照指定 collection 的迭代器所返回的顺序添加这些元素。
-     */
     public ArrayList<node> son;
     public String type = "";//expression   for
     public String name = "";//+ - * /      \
