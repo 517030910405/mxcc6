@@ -956,8 +956,8 @@ public class pro1 {
         } catch (Throwable eee){
             //throw new Exception("Well");
             System.err.println("CE");
-            throw eee;
-            //System.exit(-1);
+            //throw eee;
+            System.exit(-1);
         }
         System.out.println("OK");
     }
