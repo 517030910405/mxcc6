@@ -309,6 +309,7 @@ public class EvalVisitor extends MxBaseVisitor<node> {
             node node2 = visit(item);
             ans.son.add(node2);
         }
+        ans.has_scope = true;
         return ans;
     }
     /**
